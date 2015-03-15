@@ -1,0 +1,79 @@
+Index: ikiwiki/underlays/openid-selector/ikiwiki/openid/openid-jquery.js
+===================================================================
+--- ikiwiki.orig/underlays/openid-selector/ikiwiki/openid/openid-jquery.js
++++ ikiwiki/underlays/openid-selector/ikiwiki/openid/openid-jquery.js
+@@ -6,67 +6,14 @@ This code is licenced under the New BSD
+ */
+ 
+ var providers_large = {
+-    google: {
+-        name: 'Google',
+-	icon: 'http://google.com/favicon.ico',
+-        url: 'https://www.google.com/accounts/o8/id'
+-    },
+-    yahoo: {
+-        name: 'Yahoo',      
+-	icon: 'http://yahoo.com/favicon.ico',
+-        url: 'http://me.yahoo.com/'
+-    },    
+-    openid: {
+-        name: 'OpenID',     
+-	icon: 'wikiicons/openidlogin-bg.gif',
+-        label: 'Enter your OpenID:',
+-        url: null
+-    }
+-};
+-var providers_small = {
+-    livejournal: {
+-        name: 'LiveJournal',
+-	icon: 'http://livejournal.com/favicon.ico',
+-        label: 'Enter your Livejournal username:',
+-        url: 'http://{username}.livejournal.com/'
+-    },
+-    flickr: {
+-	name: 'Flickr',        
+-	icon: 'http://flickr.com/favicon.ico',
+-	label: 'Enter your Flickr username:',
+-	url: 'http://flickr.com/photos/{username}/'
+-    },
+-    wordpress: {
+-        name: 'Wordpress',
+-	icon: 'https://s2.wp.com/i/favicon.ico',
+-        label: 'Enter your Wordpress.com username:',
+-        url: 'http://{username}.wordpress.com/'
+-    },
+-    myopenid: {
+-        name: 'MyOpenID',
+-	icon: 'http://myopenid.com/favicon.ico',
+-        label: 'Enter your MyOpenID username:',
+-        url: 'http://{username}.myopenid.com/'
+-    },
+-    claimid: {
+-        name: 'ClaimID',
+-	icon: 'http://claimid.com/favicon.ico',
+-        label: 'Enter your ClaimID username:',
+-        url: 'http://claimid.com/{username}'
+-    },
+-    aol: {
+-        name: 'AOL',     
+-	icon: 'http://aol.com/favicon.ico',
+-        label: 'Enter your AOL username:',
+-        url: 'http://openid.aol.com/{username}'
+-    },
+-    verisign: {
+-        name: 'Verisign',
+-	icon: 'http://verisign.com/favicon.ico',
+-        label: 'Enter your Verisign username:',
+-        url: 'http://{username}.pip.verisignlabs.com/'
+-    }
++    suse: {
++        name: 'SUSE',
++	icon: 'https://www.suse.com/common/img/favicon.gif',
++        title: 'Shares authorization with SUSE/Novell Bugzilla. (Single sign on)',
++        url: 'https://www.suse.com/openid/user/{username}'
++    } 
+ };
++var providers_small = false;
+ var providers = $.extend({}, providers_large, providers_small);
+ 
+ var openid = {

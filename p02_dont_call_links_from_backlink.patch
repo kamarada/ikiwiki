@@ -1,0 +1,14 @@
+Index: ikiwiki/IkiWiki/Render.pm
+===================================================================
+--- ikiwiki.orig/IkiWiki/Render.pm
++++ ikiwiki/IkiWiki/Render.pm
+@@ -31,7 +31,8 @@ sub calculate_links () {
+ sub backlink_pages ($) {
+ 	my $page=shift;
+ 
+-	calculate_links();
++	# This is already done or it is too early and it won't work
++	# calculate_links();
+ 
+ 	return keys %{$backlinks{$page}};
+ }
