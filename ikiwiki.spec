@@ -154,9 +154,11 @@ cp -a %{SOURCE0} COPYING
 rm IkiWiki/Plugin/cvs.pm
 # remove other problematic files
 rm t/cvs.t
+rm t/git.t
 rm t/html.t
 rm t/img.t
 rm t/podcast.t
+rm t/syslog.t
 
 
 %build
